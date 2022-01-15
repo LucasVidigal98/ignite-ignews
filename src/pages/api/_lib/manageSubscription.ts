@@ -23,7 +23,7 @@ export async function saveSubscription(subscriptionId: string, customerId: strin
     id: subscription.id,
     userId: userRef,
     status: subscription.status,
-    price_id: subscription.items[0].price.id,
+    price_id: subscription.items.data[0].price.id,
   }
   
   await fauna.query(
