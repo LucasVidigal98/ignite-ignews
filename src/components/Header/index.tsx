@@ -1,4 +1,6 @@
 import { SingInButton } from '../SingInButton';
+import ActiveLink from '../ActtiveLink';
+
 import styles from './styles.module.scss';
 
 /* eslint-disable @next/next/no-img-element */
@@ -8,8 +10,13 @@ export function Header() {
       <div className={styles.headerContent}>
         <img src="/images/logo.svg" alt="logo" />
         <nav>
-          <a href="" className={styles.active}>Home</a>
-          <a href="">Posts</a>
+          <ActiveLink activeClassName={styles.active} href="/">
+            <a>Home</a>
+          </ActiveLink>
+
+          <ActiveLink activeClassName={styles.active} href="/posts">
+            <a>Posts</a>
+          </ActiveLink>
         </nav>
 
         <SingInButton />
