@@ -15,6 +15,6 @@ Ignews é um Blog com as principais notícias do mundo do ReactJS.
 * Stripe API
 * FaunaDB
 
-## Images
+## Layout Base
 
 ![ignews](/assets/Capa.png "Ignews")
