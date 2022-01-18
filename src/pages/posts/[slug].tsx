@@ -40,13 +40,13 @@ function Post({ post }: PostsProps) {
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ req, params }) => {
-  const { activeSubscription } = await getSession({ req });
+  const session = await getSession({ req });
   const { slug } = params;
 
-  if(!activeSubscription) {
+  if(!session?.activeSubscription) {
     return {
       redirect: {
-        destination: '/',
+        destination: `/posts/preview/${slug}`,
         permanent: false,
       }
     }
